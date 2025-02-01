@@ -1,8 +1,7 @@
 loadstring(game:HttpGet("https://overdrivehub.xyz/?d=auth&script=mm2_lite"))() -- the script
 loadstring(game:HttpGet("https://github.com/xxpwnxxx420lord/nn/blob/main/external/antiafk.lua?raw=true"))() -- anti afk
 
-local TextChatService = game:GetService("TextChatService")
-local 
+local TextChatService = game:GetService("TextChatService") 
 
 local function chat(message)
     if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
