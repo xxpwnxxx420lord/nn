@@ -4,12 +4,18 @@ loadstring(game:HttpGet("https://github.com/xxpwnxxx420lord/nn/blob/main/externa
 local TextChatService = game:GetService("TextChatService")
 
 local function chat(message)
+    if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
         local TextChannels = TextChatService:FindFirstChild("TextChannels")
         local RBXGeneral = TextChannels:FindFirstChild("RBXGeneral")
 
         RBXGeneral:SendAsync(message)
-end
+    else
+        local DefaultChat = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
+        local MessageRequest = DefaultChat:FindFirstChild("SayMessageRequest")
 
+        MessageRequest:FireServer(message, "All")
+    end
+end
 chat("gg/2xyCnr4gsD")
 
 print("fuck trump")
