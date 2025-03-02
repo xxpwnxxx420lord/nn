@@ -18,7 +18,7 @@ local function chat(message)
 end
 chat("gg/2xyCnr4gsD")
 
-print("fuck trump")
+print("fuck kamala")
 while wait(300) do
  chat("gg/2xyCnr4gsD")
 end
